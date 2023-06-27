@@ -1,14 +1,6 @@
-list = [1, 2, 3, 4, 5]
+# WAPP to check the file size
 
-max = list[0]
-min = list[0]
+import os
 
-for element in list:
-    if element < min:
-        min = element
-    
-    if element > max:
-        max = element
-
-print("Min value is", min)
-print("Max value is", max)
+file_stat = os.stat('my_file.txt')
+print(file_stat.st_size)

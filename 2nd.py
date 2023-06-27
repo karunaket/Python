@@ -1,5 +1,3 @@
-list = [1, 2, 3, 4, 5]
+# WAPP to convert bytes to strings
 
-length = len(list)
-
-print(length)
+print(b'Easy \xE2\x9C\x85'.decode("utf-8"))

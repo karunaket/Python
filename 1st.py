@@ -1,7 +1,15 @@
-list = [1, 2, 3, 4, 5]
+# WAPP to create countdown timer
 
-temp = list[0]
-list[0] = list[-1]
-list[-1] = temp
+import time
 
-print(list)
+def countdown(time_sec):
+    while time_sec:
+        mins, secs = divmod(time_sec, 60)
+        timeformat = '{:02d}:{:02d}'.format(mins, secs)
+        print(timeformat, end='\r')
+        time.sleep(1)
+        time_sec -= 1
+
+    print("stop")
+
+countdown(5)
